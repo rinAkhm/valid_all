@@ -1,25 +1,36 @@
 class InputParameterVerificationError(Exception):
-    def __init__(self, message):
+    def __init__(self, message: str):
+        """Конструктор."""
         self.message = message
         super().__init__(message)
 
-    def __str__(self):
+    def __str__(self) -> str:
+        """Вывод ошибки."""
         return f'Ошибка: {self.message}'
 
 
 class ResultVerificationError(Exception):
-    def __init__(self, message):
+    """Ошибка ResultVerificationError срабатывает при не валидном
+     результе."""
+
+    def __init__(self, message: str):
+        """Конструктор."""
         self.message = message
         super().__init__(message)
 
-    def __str__(self):
+    def __str__(self) -> str:
+        """Вывод ошибки."""
         return f'Ошибка: {self.message}'
 
 
 class ParamVerificationIsZero(Exception):
-    def __init__(self, message):
+    """Ошибка своя."""
+
+    def __init__(self, message: str):
+        """Конструктор."""
         self.message = message
         super().__init__(message)
 
-    def __str__(self):
+    def __str__(self) -> str:
+        """Вывод ошибки."""
         return f'Ошибка: {self.message}'
